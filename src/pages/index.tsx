@@ -1,3 +1,4 @@
+import { Button } from '@nextui-org/react'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <main>
         Time Tracker
+        <Button>Click me</Button>
       </main>
     </>
   )
