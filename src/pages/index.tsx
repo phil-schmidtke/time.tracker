@@ -10,10 +10,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <div style={{marginTop: "24px"}}>
         Time Tracker
-        <Button>Click me</Button>
-      </main>
+        <Button style={{zIndex: "0"}}>Click me</Button>
+      </div>
     </>
   )
 }
