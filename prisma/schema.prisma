@@ -9,3 +9,35 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User{
+    ID Int @id @default(autoincrement())
+    Username String 
+    Mail String 
+    Password String
+}
+
+model TrackedTimes {
+  ID Int @id @default(autoincrement())
+  UserID Int
+  CategoryName Int
+  StartTime DateTime
+  EndTime DateTime
+  Name String?
+  Description String?
+  flagPause Boolean
+}
+
+model Categories{
+  ID Int @id @default(autoincrement())
+  UserID Int 
+  CategoryName String
+  Description String?
+}
+
+model PauseTrackedTimes{
+  ID Int @id @default(autoincrement())
+  TrackedTimesID Int
+  StartTime DateTime
+  EndTime DateTime
+}
