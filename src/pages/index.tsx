@@ -36,10 +36,10 @@ export default function Home() {
             <Button shadow size="lg" style={{zIndex: "0"}}>Log In</Button>
             <Button shadow size="lg" color='secondary' style={{zIndex: "0"}}>Register Now!</Button>
         </div>
-        <div style={{marginTop: "200px"}}>
+        <div style={{marginTop: "100px"}}>
           <Text h3>Features</Text>
           <div className='features'>
-            <Grid.Container gap={8} justify="center">
+            <Grid.Container gap={4} justify="center">
               <Grid>
                 <Card css={{ w: "300px", h: "400px" }}>
                 <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>

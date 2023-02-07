@@ -103,6 +103,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <Container lg>
           <Component {...pageProps} />
         </Container>
+        <div style={{display: "flex", padding: "12px", backdropFilter: "saturate(180%) blur(10px)", background: "rgba(255, 255, 255, 0.1)"}}>
+          <div style={{ marginLeft: "auto", marginRight: "auto"}}>
+            <Text h5 css={{textAlign: "center"}}>&nbsp;Created by Phil S. and Daniel S.</Text>
+          </div>
+        </div>
       </main>
       <BgGradient />
     </NextUIProvider>
