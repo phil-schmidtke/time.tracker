@@ -23,18 +23,18 @@ export default function Home() {
             <Text h2 size={20}>
               Track your time, sort in categorys and get deteiled insights and analytics into your productivity and time management.
             </Text>
+            <div className='action'>
+              <Button shadow size="lg" style={{zIndex: "0"}}>Log In</Button>
+              <Button shadow size="lg" color='secondary' style={{zIndex: "0"}}>Register Now!</Button>
+            </div>
           </div>
           <div style={{display: "block"}}>
             <div style={{marginLeft: "auto", marginRight: "auto"}} >
-              <div style={{marginTop: "24px"}}>
+              <div className='time'>
                 <TimeSVG />
               </div>
             </div>
           </div>
-        </div>
-        <div className='action'>
-            <Button shadow size="lg" style={{zIndex: "0"}}>Log In</Button>
-            <Button shadow size="lg" color='secondary' style={{zIndex: "0"}}>Register Now!</Button>
         </div>
         <div style={{marginTop: "100px"}}>
           <Text h3>Features</Text>
