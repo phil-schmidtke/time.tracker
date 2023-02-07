@@ -1,5 +1,6 @@
 import TimeSVG from '@/components/TimeSvg'
 import { Button, Text, Card, Col, Row, Grid } from '@nextui-org/react'
+import { motion } from 'framer-motion'
 import Head from 'next/head'
 
 export default function Home() {
@@ -12,7 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{marginTop: "24px", paddingBottom: "62px"}} className="z-10">
-        <div className='hero'>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }} className='hero'>
           <div style={{marginLeft: "24px", marginTop: "48px"}}>
             <Text h1 size={60}
               css={{
@@ -35,13 +39,17 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        <div style={{marginTop: "100px"}}>
+        </motion.div>
+        <motion.div
+          initial={{ y: 350, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          style={{marginTop: "100px"}}>
           <Text h3>Features</Text>
           <div className='features'>
             <Grid.Container gap={4} justify="center">
               <Grid>
-                <Card css={{ w: "300px", h: "400px" }}>
+                <Card isHoverable css={{ w: "300px", h: "400px" }}>
                 <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                   <Col>
                     <Text h3 color="black">
@@ -96,7 +104,7 @@ export default function Home() {
               </Card>
               </Grid>
               <Grid>
-                <Card css={{ w: "300px", h: "400px" }}>
+                <Card isHoverable css={{ w: "300px", h: "400px" }}>
                 <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                   <Col>
                     <Text h3 color="white">
@@ -151,7 +159,7 @@ export default function Home() {
               </Card>
               </Grid>
               <Grid>
-                <Card css={{ w: "300px", h: "400px" }}>
+                <Card isHoverable css={{ w: "300px", h: "400px" }}>
                 <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                   <Col>
                     <Text h3 color="white">
@@ -207,6 +215,11 @@ export default function Home() {
               </Grid>
             </Grid.Container>
           </div>
+        </motion.div>
+      </div>
+      <div style={{display: "flex", padding: "12px", backdropFilter: "saturate(180%) blur(10px)", background: "rgba(255, 255, 255, 0.1)"}}>
+        <div style={{ marginLeft: "auto", marginRight: "auto"}}>
+          <Text h5 css={{textAlign: "center"}}>&nbsp;Created by Phil S. and Daniel S.</Text>
         </div>
       </div>
     </>
