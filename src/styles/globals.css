@@ -3,6 +3,33 @@
 @tailwind utilities;
 
 html, body {
-  background-color: black;
+  background-color: transparent;
   color: white;
+}
+
+.bgI {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0%;
+}
+
+@media only screen and (max-width: 800px) {
+  .bgI {
+    width: 100%;
+    height: 100%;
+    rotate: 90deg;
+    left: -20%;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bgI {
+    width: 100%;
+    height: 100%;
+    rotate: 90deg;
+    left: -80%;
+    top: 0;
+  }
 }
