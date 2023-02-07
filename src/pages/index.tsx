@@ -1,4 +1,5 @@
-import { Button } from '@nextui-org/react'
+import TimeSVG from '@/components/TimeSvg'
+import { Button, Text } from '@nextui-org/react'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,8 +12,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{marginTop: "24px"}} className="z-10">
-        Time Tracker
-        <Button style={{zIndex: "0"}}>Click me</Button>
+        <div className='hero'>
+          <div style={{marginLeft: "24px", marginTop: "48px"}}>
+            <Text h1 size={60}
+              css={{
+                textGradient: "45deg, $blue600 -20%, $pink600 80%",
+              }}>
+              Time Tracker
+            </Text>
+            <Text h2 size={20}>
+              Track your time, sort in categorys and get deteiled insights and analytics into your productivity and time management.
+            </Text>
+          </div>
+          <div style={{display: "block"}}>
+            <div style={{marginLeft: "auto", marginRight: "auto"}} >
+              <div style={{marginTop: "24px"}}>
+                <TimeSVG />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='action'>
+            <Button shadow size="lg">Log In</Button>
+            <Button shadow size="lg" color='secondary'>Register Now!</Button>
+        </div>
       </div>
     </>
   )
