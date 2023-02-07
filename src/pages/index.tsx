@@ -1,4 +1,6 @@
-import { Button } from '@nextui-org/react'
+import TimeSVG from '@/components/TimeSvg'
+import { Button, Text, Card, Col, Row, Grid } from '@nextui-org/react'
+import { motion } from 'framer-motion'
 import Head from 'next/head'
 
 export default function Home() {
@@ -10,9 +12,215 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{marginTop: "24px"}}>
-        Time Tracker
-        <Button style={{zIndex: "0"}}>Click me</Button>
+      <div style={{marginTop: "24px", paddingBottom: "62px"}} className="z-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }} className='hero'>
+          <div style={{marginLeft: "24px", marginTop: "48px"}}>
+            <Text h1 size={60}
+              css={{
+                textGradient: "45deg, $blue600 -20%, $pink600 80%",
+              }}>
+              Time Tracker
+            </Text>
+            <Text h2 size={20}>
+              Track your time, sort in categorys and get deteiled insights and analytics into your productivity and time management.
+            </Text>
+            <div className='action'>
+              <Button shadow size="lg" style={{zIndex: "0"}}>Log In</Button>
+              <Button shadow size="lg" color='secondary' style={{zIndex: "0"}}>Register Now!</Button>
+            </div>
+          </div>
+          <div style={{display: "block"}}>
+            <div style={{marginLeft: "auto", marginRight: "auto"}} >
+              <div className='time'>
+                <TimeSVG />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ y: 350, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          style={{marginTop: "100px"}}>
+          <Text h3>Features</Text>
+          <div className='features'>
+            <Grid.Container gap={4} justify="center">
+              <Grid>
+                <Card isHoverable css={{ w: "300px", h: "400px" }}>
+                <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text h3 color="black">
+                      Tracking
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body css={{ p: 0 }}>
+                  <Card.Image
+                    src="/times.jpg"
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  isBlurred
+                  css={{
+                    position: "absolute",
+                    bgBlur: "#0f111466",
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.3)",
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="#000" size={12}>
+                        Track all of your Times
+                      </Text>
+                      <Text color="#000" size={12}>
+                        Work or private.
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded color="primary">
+                          <Text
+                            css={{ color: "inherit" }}
+                            size={12}
+                            weight="bold"
+                            transform="uppercase"
+                          >
+                            Get started
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              </Grid>
+              <Grid>
+                <Card isHoverable css={{ w: "300px", h: "400px" }}>
+                <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text h3 color="white">
+                      Categorys
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body css={{ p: 0 }}>
+                  <Card.Image
+                    src="/speed.jpg"
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  isBlurred
+                  css={{
+                    position: "absolute",
+                    bgBlur: "#0f111466",
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.3)",
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="white" size={12}>
+                        Categorize for full Insights
+                      </Text>
+                      <Text color="white" size={12}>
+                        Maximize Productivity
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded color="primary">
+                          <Text
+                            css={{ color: "inherit" }}
+                            size={12}
+                            weight="bold"
+                            transform="uppercase"
+                          >
+                            See more
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              </Grid>
+              <Grid>
+                <Card isHoverable css={{ w: "300px", h: "400px" }}>
+                <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                  <Col>
+                    <Text h3 color="white">
+                      Analytics
+                    </Text>
+                  </Col>
+                </Card.Header>
+                <Card.Body css={{ p: 0 }}>
+                  <Card.Image
+                    src="/analytics.jpg"
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                    alt="Card example background"
+                  />
+                </Card.Body>
+                <Card.Footer
+                  isBlurred
+                  css={{
+                    position: "absolute",
+                    bgBlur: "#ffffff66",
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
+                    bottom: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  <Row>
+                    <Col>
+                      <Text color="#000" size={12}>
+                        Detailed Analytics
+                      </Text>
+                      <Text color="#000" size={12}>
+                        Improve Time Management
+                      </Text>
+                    </Col>
+                    <Col>
+                      <Row justify="flex-end">
+                        <Button flat auto rounded color="primary">
+                          <Text
+                            css={{ color: "inherit" }}
+                            size={12}
+                            weight="bold"
+                            transform="uppercase"
+                          >
+                            See more
+                          </Text>
+                        </Button>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Card.Footer>
+              </Card>
+              </Grid>
+            </Grid.Container>
+          </div>
+        </motion.div>
+      </div>
+      <div style={{display: "flex", padding: "12px", backdropFilter: "saturate(180%) blur(10px)", background: "rgba(255, 255, 255, 0.1)"}}>
+        <div style={{ marginLeft: "auto", marginRight: "auto"}}>
+          <Text h5 css={{textAlign: "center"}}>&nbsp;Created by Phil S. and Daniel S.</Text>
+        </div>
       </div>
     </>
   )

@@ -1,4 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body {
-  background-color: black;
+  background-color: transparent;
   color: white;
+}
+
+.bgI {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0%;
+}
+
+@media only screen and (max-width: 800px) {
+  .bgI {
+    width: 100vh;
+    height: 100vh;
+    rotate: 90deg;
+    left: -20%;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bgI {
+    width: 100vh;
+    height: 100vh;
+    rotate: 90deg;
+    left: -80%;
+    top: 0;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 62px;
+}
+
+.hero div {
+  width: 40%;
+}
+
+@media only screen and (max-width: 1124px) {
+  .hero {
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  .hero div {
+    width: 90%;
+  }
+}
+
+.time {
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 1124px) {
+  .time {
+    margin-top: 120px;
+  }
+}
+
+.action {
+  display: flex;
+  gap: 48px;
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: 700px) {
+  .action {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+.features {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-evenly;
 }

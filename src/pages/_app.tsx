@@ -4,6 +4,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import { Navbar, Button, Link, Text, createTheme, Container } from "@nextui-org/react";
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import BgGradient from '@/components/BgGradient';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -31,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <NextUIProvider theme={theme}>
       <Navbar isBordered variant="floating" style={{zIndex: "20"}}>
         <Navbar.Brand>
-          <Navbar.Toggle aria-label="toggle navigation" />
+          <Navbar.Toggle aria-label="toggle navigation" showIn="xs" />
           <Text b color="inherit" style={{marginLeft: "8px"}}>
             Time Tracker
           </Text>
@@ -98,11 +99,12 @@ export default function App({ Component, pageProps }: AppProps) {
         ))}
       </Navbar.Collapse>
       </Navbar>
-      <main style={{zIndex: "0"}}>
+      <main style={{zIndex: "10"}}>
         <Container lg>
           <Component {...pageProps} />
         </Container>
       </main>
+      <BgGradient />
     </NextUIProvider>
   )
 }
