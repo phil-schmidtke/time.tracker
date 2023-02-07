@@ -62,8 +62,8 @@ export default function Home() {
                   isBlurred
                   css={{
                     position: "absolute",
-                    bgBlur: "#ffffff66",
-                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
+                    bgBlur: "#0f111466",
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.3)",
                     bottom: 0,
                     zIndex: 1,
                   }}
@@ -71,10 +71,10 @@ export default function Home() {
                   <Row>
                     <Col>
                       <Text color="#000" size={12}>
-                        Available soon.
+                        Track all of your Times
                       </Text>
                       <Text color="#000" size={12}>
-                        Get notified.
+                        Work or private.
                       </Text>
                     </Col>
                     <Col>
@@ -86,7 +86,7 @@ export default function Home() {
                             weight="bold"
                             transform="uppercase"
                           >
-                            Notify Me
+                            Get started
                           </Text>
                         </Button>
                       </Row>
@@ -118,7 +118,7 @@ export default function Home() {
                   css={{
                     position: "absolute",
                     bgBlur: "#0f111466",
-                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
+                    borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.3)",
                     bottom: 0,
                     zIndex: 1,
                   }}
@@ -126,10 +126,10 @@ export default function Home() {
                   <Row>
                     <Col>
                       <Text color="white" size={12}>
-                        Available soon.
+                        Categorize for full Insights
                       </Text>
                       <Text color="white" size={12}>
-                        Get notified.
+                        Maximize Productivity
                       </Text>
                     </Col>
                     <Col>
@@ -141,7 +141,7 @@ export default function Home() {
                             weight="bold"
                             transform="uppercase"
                           >
-                            Notify Me
+                            See more
                           </Text>
                         </Button>
                       </Row>
@@ -181,10 +181,10 @@ export default function Home() {
                   <Row>
                     <Col>
                       <Text color="#000" size={12}>
-                        Available soon.
+                        Detailed Analytics
                       </Text>
                       <Text color="#000" size={12}>
-                        Get notified.
+                        Improve Time Management
                       </Text>
                     </Col>
                     <Col>
@@ -196,7 +196,7 @@ export default function Home() {
                             weight="bold"
                             transform="uppercase"
                           >
-                            Notify Me
+                            See more
                           </Text>
                         </Button>
                       </Row>
