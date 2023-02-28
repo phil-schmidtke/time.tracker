@@ -14,7 +14,7 @@ export default function Login() {
                     </div>
                 </div>
                 <div className="form-spacer">
-                    <Input labelPlaceholder="Username" css={{ display: "block" }} />
+                    <Input labelPlaceholder="Username or E-Mail" css={{ display: "block" }} />
                 </div>
                 <div className="form-spacer">
                     <Input.Password labelPlaceholder="Password" css={{ display: "block" }} />

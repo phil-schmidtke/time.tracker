@@ -14,10 +14,13 @@ export default function Register() {
                     </div>
                 </div>
                 <div className="form-spacer">
-                    <Input labelPlaceholder="Username" css={{ display: "block" }} />
+                    <Input labelPlaceholder="Username or E-Mail" css={{ display: "block" }} />
                 </div>
                 <div className="form-spacer">
                     <Input.Password labelPlaceholder="Password" css={{ display: "block" }} />
+                </div>
+                <div style={{marginTop:"24px"}}>
+                    <Input.Password labelPlaceholder="Confirm" css={{ display: "block" }} />
                 </div>
                 <Button shadow css={{ width: "100%" }} style={{ marginTop: "24px" }}>Sign Up</Button>
             </div>
