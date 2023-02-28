@@ -56,11 +56,11 @@ export default function App({ Component, pageProps }: AppProps) {
             Logout
           </Navbar.Link></> 
           :
-          <><Navbar.Link color="inherit" onClick={() => setAuthenticated(true)}>
+          <><Navbar.Link isActive={pathname === "/login" ? true : false} color="inherit" onClick={() => router.push("/login")}>
           Login
         </Navbar.Link>
-        <Navbar.Item>
-          <Button auto flat as={Link} href="#">
+        <Navbar.Item >
+          <Button auto flat as={Link} href="#" onClick={() => router.push("/register")} >
             Sign Up
           </Button>
         </Navbar.Item></>}

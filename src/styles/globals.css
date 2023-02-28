@@ -83,3 +83,12 @@ html, body {
   display: flex;
   justify-content: space-evenly;
 }
+
+.form-spacer{
+  margin-top: 40px;
+}
+
+.icon-size{
+  height: 100px;
+  width: 100;
+}
