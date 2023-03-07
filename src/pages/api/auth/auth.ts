@@ -11,11 +11,13 @@ export default async function handler(
   if (req.method === "GET") {
     const header = req.headers.authorization;
     const token = header && header.split(" ")[1];
-    var decoded = jwt.verify(token, "08151312");
-    if (decoded) {
-      res.status(200).json({ message: "success" });
-    } else {
-      res.status(400).json({ message: "wrong token" });
+    if (token) {
+      var decoded = jwt.verify(token, "08151312");
+      if (decoded) {
+        res.status(200).json({ message: "success" });
+      } else {
+        res.status(400).json({ message: "wrong token" });
+      }
     }
   }
 }
