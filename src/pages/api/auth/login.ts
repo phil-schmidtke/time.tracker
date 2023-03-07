@@ -4,14 +4,9 @@ import prisma from "../../../lib/prisma";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-type Data = {
-  token: string | null;
-  error: string | null;
-};
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse
 ) {
   if (req.method === "POST") {
     const username = req.body.username;
