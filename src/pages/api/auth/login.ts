@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../lib/prisma";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 type Data = {
   token: string | null;
@@ -16,17 +17,18 @@ export default async function handler(
     const username = req.body.username;
     const password = req.body.password;
     if (username && password) {
-      const hashPw = await bcrypt.hash(password, 10);
-      console.log("hashpw", hashPw);
       const user = await prisma.user.findFirst({
         where: {
           Username: username,
-          Password: hashPw,
         },
       });
-      console.log("user", user);
-      if (user) {
-        res.status(200).json({ username, password });
+      const login = await bcrypt.compare(password, user.Password);
+      if (login) {
+        const token = await jwt.sign(username, "08151312");
+        console.log("token", token);
+        if (token) {
+          res.status(200).json({ token });
+        }
       } else {
         res.status(400).json({ error: "no user found" });
       }
