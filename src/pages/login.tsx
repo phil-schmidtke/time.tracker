@@ -5,7 +5,7 @@ export default function Login() {
     return (
 
         <div style={{ display: "flex", marginTop: "124px" }}>
-            <div style={{ marginLeft: "auto", marginRight: "auto", width: "25%" }}>
+            <div className="auth-form">
                 <div style={{display: "flex"}}>
                     <div style={{ marginLeft: "auto", marginRight: "auto"}}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={0.5} stroke="currentColor" className="icon-size">
