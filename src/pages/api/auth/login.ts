@@ -17,15 +17,17 @@ export default async function handler(
           Username: username,
         },
       });
-      const login = await bcrypt.compare(password, user.Password);
-      if (login) {
-        const token = await jwt.sign(username, "08151312");
-        console.log("token", token);
-        if (token) {
-          res.status(200).json({ token });
+      if (user) {
+        const login = await bcrypt.compare(password, user.Password);
+        if (login) {
+          const token = await jwt.sign(username, "08151312");
+          console.log("token", token);
+          if (token) {
+            res.status(200).json({ token });
+          }
+        } else {
+          res.status(400).json({ error: "no user found" });
         }
-      } else {
-        res.status(400).json({ error: "no user found" });
       }
     } else {
       res.status(400).json({ error: "Wrong JSON Body" });
