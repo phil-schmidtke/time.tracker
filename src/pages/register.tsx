@@ -1,9 +1,19 @@
 import { Button, Grid, Input } from "@nextui-org/react";
 import { BlockList } from "net";
+import { useEffect, useState } from "react";
 
 export default function Register() {
+    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [confirm, setConfirm] = useState("")
+
+    useEffect(() => {
+        console.log(username)
+    })
+
     return (
-        
+
         <div style={{ display: "flex", marginTop: "124px" }}>
             <div className="auth-form">
                 <div style={{ display: "flex" }}>
@@ -14,13 +24,16 @@ export default function Register() {
                     </div>
                 </div>
                     <div className="form-spacer" >
-                        <Input labelPlaceholder="Username or E-Mail" css={{ display: "block" }} />
+                        <Input labelPlaceholder="Username" css={{ display: "block" }} value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
+                    </div>
+                    <div className="form-spacer" >
+                        <Input labelPlaceholder="E-Mail" css={{ display: "block" }} value={email} onChange={(e)=>{setEmail(e.target.value)}} />
                     </div>
                     <div className="form-spacer">
-                        <Input.Password labelPlaceholder="Password" css={{ display: "block" }} />
+                        <Input.Password labelPlaceholder="Password" css={{ display: "block" }} value={password} onChange={(e)=>{setPassword(e.target.value)}} />
                     </div>
                     <div style={{ marginTop: "40px" }}>
-                    <Input.Password labelPlaceholder="Confirm" css={{ display: "block" }} />
+                    <Input.Password labelPlaceholder="Confirm" css={{ display: "block" }} value={confirm} onChange={(e)=>{setUsername(e.target.value)}} />
                     </div>
                 <Button shadow css={{ width: "100%" }} style={{ marginTop: "24px" }}>Sign Up</Button>
             </div>
